@@ -18,6 +18,7 @@ def index():
         print("Names {0} Email {1} Age {2}".format(names,email,age))
         User.create(names=names, email=email, age=age, password=password)
         user =User.get(User.id==1)
+        print(user.names)
 
     return render_template("index.html",form=form )
 
